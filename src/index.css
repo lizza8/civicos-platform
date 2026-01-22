@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: hsl(230, 30%, 5%);
+    --color-foreground: hsl(0, 0%, 98%);
+    --color-border: hsl(230, 20%, 20%);
+    --color-input: hsl(185, 100%, 40%);
+    --color-ring: hsl(185, 100%, 65%);
+    
+    --color-primary: hsl(185, 100%, 50%);
+    --color-primary-foreground: hsl(0, 0%, 100%);
+    --color-primary-hover: hsl(185, 100%, 60%);
+    --color-primary-active: hsl(185, 100%, 45%);
+    
+    --color-secondary: hsl(300, 90%, 55%);
+    --color-secondary-foreground: hsl(0, 0%, 100%);
+    --color-secondary-hover: hsl(300, 90%, 60%);
+    --color-secondary-active: hsl(300, 90%, 45%);
+    
+    --color-tertiary: hsl(240, 40%, 20%);
+    --color-tertiary-foreground: hsl(0, 0%, 100%);
+    
+    --color-accent: hsl(330, 90%, 55%);
+    --color-accent-foreground: hsl(0, 0%, 100%);
+    
+    --color-success: hsl(140, 90%, 45%);
+    --color-success-foreground: hsl(0, 0%, 100%);
+    
+    --color-warning: hsl(50, 100%, 55%);
+    --color-warning-foreground: hsl(0, 0%, 10%);
+    
+    --color-error: hsl(0, 100%, 50%);
+    --color-error-foreground: hsl(0, 0%, 100%);
+    
+    --color-info: hsl(210, 100%, 55%);
+    --color-info-foreground: hsl(0, 0%, 100%);
+    
+    --color-muted: hsl(230, 10%, 15%);
+    --color-muted-foreground: hsl(230, 10%, 55%);
+    
+    --color-card: hsla(230, 30%, 5%, 0.6);
+    --color-card-foreground: hsl(0, 0%, 98%);
+    
+    --font-sans: "Geist", "Inter", sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    color: var(--color-foreground);
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-foreground;
+    letter-spacing: -0.025em;
+  }
+
+  a {
+    @apply text-primary;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  button {
+    @apply text-foreground;
+  }
+
+  input::placeholder {
+    @apply text-muted-foreground;
+  }
+}
+
+@layer utilities {
+  .glassmorphism {
+    background: hsla(230, 30%, 5%, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .neon-border {
+    border: 1px solid hsla(185, 100%, 50%, 0.2);
+  }
+
+  .neon-glow {
+    box-shadow: 0 0 12px hsla(185, 100%, 50%, 0.5);
+  }
+
+  .neon-glow-hover:hover {
+    box-shadow: 0 0 16px hsla(185, 100%, 50%, 0.7);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
