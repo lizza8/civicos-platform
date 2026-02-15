@@ -5,7 +5,7 @@
 > The following steps require [NodeJS](https://nodejs.org/en/) to be installed on your system, so please          
 > install it beforehand if you haven't already.  
    
-To get started with your project, you'll first need to install the dependencies with: 
+To get started with your project, you'll first need to install the dependencies with:  
 
 ```
 npm install
