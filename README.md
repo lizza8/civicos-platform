@@ -1,5 +1,5 @@
 
-## Getting started   
+## Getting started    
    
 > **Prerequisites:**       
 > The following steps require [NodeJS](https://nodejs.org/en/) to be installed on your system, so please         
