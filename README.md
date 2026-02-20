@@ -16,7 +16,7 @@ Then, you'll be able to run a development version of the project with:
 ```
 npm run dev
 ```
-
+ 
 After a few seconds, your project should be accessible at the address
 [http://localhost:5173/](http://localhost:5173/)
 
